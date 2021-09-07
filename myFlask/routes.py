@@ -1,4 +1,4 @@
-# from app.factory import create_app
+    # from app.factory import create_app
 import pymongo
 import mysql.connector
 from flask import jsonify
@@ -16,6 +16,10 @@ def init_app(app):
     @app.route('/')
     def index():
         return jsonify({"status": "OK", "msg":"server alive and running."})
+
+    @app.route('/test')
+    def hello():
+        return 'Hello World!\n'
 
     @app.route('/a')
     @cross_origin()
