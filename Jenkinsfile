@@ -10,7 +10,7 @@ pipeline {
                 sh 'python3 --version'
                 echo 'start venv'
                 sh 'source bin/activate'
-                sh 'pip3 install requirements.txt'
+                sh 'pip3 install -r requirements.txt'
                 echo 'done.'
             }
         }
