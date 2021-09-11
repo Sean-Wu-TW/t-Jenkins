@@ -11,6 +11,7 @@ pipeline {
                 echo 'start venv'
                 sh 'source bin/activate'
                 sh 'pip3 install -r requirements.txt'
+                sh 'python3 main.py'
                 echo 'done.'
             }
         }
